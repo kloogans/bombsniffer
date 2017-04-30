@@ -17,6 +17,7 @@ class Cell extends Component {
     check(this.props.id, this.props.row, this.props.col)
     .then(data => {
       current.game = data
+      console.log('Info: ' + current.game.mines)
     })
   }
 

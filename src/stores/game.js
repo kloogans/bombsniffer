@@ -1,7 +1,11 @@
 import { observable } from 'mobx'
 
 class CurrentGame {
-  @observable game = { board: [] }
+  @observable game = {
+    board: [],
+    mines: [],
+    state: 'start'
+  }
 }
 
 const current = new CurrentGame()

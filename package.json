@@ -1,9 +1,10 @@
 {
   "private": true,
   "scripts": {
-    "deploy": "yarn build && surge ./public --domain bombsniffer.jamesobrien.surge.sh",
+    "predeploy": "yarn build && cp public/index.html public/200.html",
+    "deploy": "surge ./public --domain bombsniffer.jamesobrien.surge.sh",
     "start": "webpack-dev-server",
-    "prebuild": "rm -f public/index.html public/app-*.js public/vendor-*.js public/screen-*.css",
+    "prebuild": "rm -f public/*.html public/app-*.js public/vendor-*.js public/screen-*.css",
     "build": "NODE_ENV=production webpack --progress"
   },
   "dependencies": {
