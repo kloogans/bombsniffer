@@ -150,9 +150,9 @@ main {
 // Game Props
 .game {
   @include flex(column , center, center);
-  @include size(100%, 100vh);
+  @include size(100%, 100%);
 
-  margin: 0 auto;
+  margin: 1em auto 0;
   color: $primaryWhite;
   animation: $blur;
 }
