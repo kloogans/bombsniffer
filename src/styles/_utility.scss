@@ -1,0 +1,110 @@
+$base-text-size: 16px;
+$base-font-family: sans-serif;
+
+// Remove the browsers built-in styling for lists elements.
+@mixin reset-list {
+  padding-left: 0;
+
+  li {
+    list-style: none;
+  }
+}
+
+// Apply a height to the html and body elements to that they
+// fill the height of the view by default.
+@mixin full-height {
+  height: 100%;
+
+  body,
+  #root {
+    min-height: 100%;
+  }
+}
+
+//Mixins
+
+// Backgrounds
+@mixin backgroundProps($url, $size) {
+  background-image: url($url);
+  background-repeat: no-repeat;
+  background-size: $size;
+  background-position: center;
+}
+
+@mixin linearGrad($colorBegin, $colorEnd) {
+  background:
+    linear-gradient(
+      135deg,
+      $colorBegin 0%,
+      $colorEnd 100%
+    );
+}
+
+// Displays
+@mixin flex ($direction, $justify, $alignItems) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $alignItems;
+}
+
+@mixin size($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+// Transitions
+@mixin primaryTransition($time) {
+  transition: all #{$time} ease;
+}
+
+// Animations
+@mixin fadeIn($time) {
+  animation: fadeIn $time ease;
+}
+
+@mixin primaryFadeIn() {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@mixin blurEntrance() {
+  0% {
+    opacity: 0;
+    filter: blur(8px);
+  }
+
+  100% {
+    opacity: 1;
+    filter: blur(0);
+  }
+}
+
+//Maps
+
+$diffMap: (
+  'easy': '../images/easy.svg',
+  'medium': '../images/medium.svg',
+  'hard': '../images/hard.svg'
+);
+
+//Variables
+
+// Color Props
+$primaryWhite: #dff8eb;
+$primaryBlack: #333;
+$purple: #a28f9d;
+$grey: #74776b;
+$brown: #5c574f;
+$red: #d46f4f;
+
+// Fonts
+$primaryFont: 'Maven Pro';
+
+// Transition Props
+$noScale: scale(1);
+$smallScale: scale(1.2);
+
+// Animations
+$fadeIn: fadeIn 0.8s ease;
+$blur: blurEntrance 0.8s ease;
