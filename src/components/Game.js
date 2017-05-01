@@ -28,22 +28,22 @@ class Game extends Component {
         return <Cell row={i} col={j}
           value={col.toString()}
           content={current.game.board[i][j]}
-          id={this.props.match.params.id} />
+          id={this.props.match.params.id}
+          key={j} />
       })
     })
     if (current.game.state === 'won') {
       setTimeout(() => { window.location = '/winner' }, 1000)
     } else if (current.game.state === 'lost') {
       setTimeout(() => { window.location = '/loser' }, 1000)
-    } else {
-      return <div className='game'>
-        <div className='gameGrid'>
-          {gameBoard}
-        </div>
-        <Reset />
-      </div>
     }
+    return <div className='game'>
+      <div className='gameGrid'>
+        {gameBoard}
+      </div>
+      <Reset />
+    </div>
   }
-}
+  }
 
 export default Game

@@ -1,9 +1,13 @@
 import React, { Component } from 'react'
-import { BrowserRouter as Router, Link, Route } from 'react-router-dom'
+import { BrowserRouter as Router,
+  Link,
+  Route
+  } from 'react-router-dom'
 import Game from './Game'
 import Home from './Home'
 import Loser from './Loser'
 import Winner from './Winner'
+import current from '../stores/game'
 
 class App extends Component {
   render () {
@@ -28,6 +32,6 @@ class App extends Component {
       </div>
     </Router>
   }
-}
+  }
 
 export default App
