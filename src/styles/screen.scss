@@ -108,6 +108,13 @@ button {
   border: 0;
   animation: $fadeIn;
 
+  &:focus {
+    outline: 0;
+    opacity: 1;
+    background-color: $purple;
+    border-radius: 5px;
+  }
+
   &:hover {
     opacity: 1;
     background-color: $purple;
