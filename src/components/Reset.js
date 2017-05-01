@@ -14,7 +14,7 @@ class Reset extends Component {
   }
   render () {
     return <button onClick={this._click} className='resetButton'>
-      <i className='fa fa-refresh' />
+      <i className='icon fa fa-refresh' />
     </button>
   }
 }

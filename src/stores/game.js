@@ -3,7 +3,7 @@ import { observable } from 'mobx'
 class CurrentGame {
   @observable game = {
     board: [],
-    mines: [],
+    mines: '*',
     state: 'start'
   }
 }

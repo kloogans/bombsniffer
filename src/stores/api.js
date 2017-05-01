@@ -20,8 +20,8 @@ const check = (id, row, col) => {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
-      'row': row,
-      'col': col
+      row: row,
+      col: col
     })
   }).then(r => r.json())
 }
@@ -32,8 +32,8 @@ const flag = (id, row, col) => {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
-      'row': row,
-      'col': col
+      row: row,
+      col: col
     })
   }).then(r => r.json())
 }

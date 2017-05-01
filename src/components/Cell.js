@@ -17,7 +17,6 @@ class Cell extends Component {
     check(this.props.id, this.props.row, this.props.col)
     .then(data => {
       current.game = data
-      console.log('Info: ' + current.game.mines)
     })
   }
 
@@ -34,7 +33,7 @@ class Cell extends Component {
       style={{gridRow: `${this.props.row + 1}`, gridCol: `${this.props.col + 1}fr`}}
       onClick={this._click}
       onContextMenu={this._flagCell}>
-      {this.props.value.match(/\d/) ? this.props.value : null}
+      <span>{this.props.value.match(/\d/) ? this.props.value : null}</span>
     </div>
   }
 }

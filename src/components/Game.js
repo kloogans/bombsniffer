@@ -25,7 +25,6 @@ class Game extends Component {
   render () {
     const gameBoard = current.game.board.map((_, i) => {
       return current.game.board[i].map((col, j) => {
-        console.log(col)
         return <Cell row={i} col={j}
           value={col.toString()}
           content={current.game.board[i][j]}
